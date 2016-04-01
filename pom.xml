@@ -52,8 +52,8 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 							</tasks>
 						</configuration>
 					</execution>
-					
-					<!-- DEFAULT LIFECYCLE -->
+
+					<!-- DEFAULT/BUILD LIFECYCLE -->
 					<execution>
 						<id>id.validate</id>
 						<phase>validate</phase>
@@ -114,6 +114,45 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 							</tasks>
 						</configuration>
 					</execution>
+
+					<!-- SITE LIFE CYCLE -->
+					<execution>
+						<id>id.pre-site</id>
+						<phase>pre-site</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>pre-site phase</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.site</id>
+						<phase>site</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>site phase</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.post-site</id>
+						<phase>post-site</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>post-site phase</echo>
+							</tasks>
+						</configuration>
+					</execution>
+
 				</executions>
 			</plugin>
 		</plugins>

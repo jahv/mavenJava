@@ -1,7 +1,11 @@
 #Displays the super pom
 mvn help:effective-pom
+https://github.com/apache/maven/blob/trunk/maven-model-builder/src/main/resources/org/apache/maven/model/pom-4.0.0.xml#L53
 
+#Show LifeCycle and phases
+https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference
 
 #Describe the phases and possible goals
 mvn help:describe -Dcmd=clean
 mvn help:describe -Dcmd=deploy
+http://www.codetab.org/apache-maven-tutorial/maven-lifecycle-and-goals/
