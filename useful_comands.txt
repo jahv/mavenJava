@@ -1,0 +1,7 @@
+#Displays the super pom
+mvn help:effective-pom
+
+
+#Describe the phases and possible goals
+mvn help:describe -Dcmd=clean
+mvn help:describe -Dcmd=deploy
