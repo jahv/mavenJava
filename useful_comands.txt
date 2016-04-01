@@ -1,11 +1,42 @@
+#Run jar
+java -cp mavenJava-0.0.1-SNAPSHOT.jar jahv.selfstudy.web.WelcomeController
+
 #Displays the super pom
-mvn help:effective-pom
-https://github.com/apache/maven/blob/trunk/maven-model-builder/src/main/resources/org/apache/maven/model/pom-4.0.0.xml#L53
+	mvn help:effective-pom
+	https://github.com/apache/maven/blob/trunk/maven-model-builder/src/main/resources/org/apache/maven/model/pom-4.0.0.xml#L53
 
-#Show LifeCycle and phases
-https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference
+#Life Cycle & Phases
 
-#Describe the phases and possible goals
-mvn help:describe -Dcmd=clean
-mvn help:describe -Dcmd=deploy
-http://www.codetab.org/apache-maven-tutorial/maven-lifecycle-and-goals/
+	#Show LifeCycle and phases
+	https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference
+	
+	#Describe the phases and possible goals
+	mvn help:describe -Dcmd=clean
+	mvn help:describe -Dcmd=deploy
+	http://www.codetab.org/apache-maven-tutorial/maven-lifecycle-and-goals/
+
+#Profile Activation
+	#Explicit profile activation
+		mvn [phase] -P[profile_Id] => mvn test -Ptest-profile
+	#Profile activation via Maven Setting
+		Open Maven settings.xml file available in %USER_HOME%/.m2
+		Add test profile as an active profile using active Profiles node
+	#Profile activation via environment variables
+		Add activation element to profile element in pom.xml with
+			<property>
+				<name>env</name>
+				<value>test</value>
+			</property>
+	#Profile Activation via Operating System
+		Add activation element to profile element in pom.xml with 
+			<os>
+				<name>Windows XP</name>
+				<family>Windows</family>
+				<arch>x86</arch>
+				<version>5.1.2600</version>
+			</os>
+	#Profile Activation via Present/Missing File
+		Add activation element to profile element in pom.xml with 
+			<file>
+				<missing>[path]</missing>
+			</file>
