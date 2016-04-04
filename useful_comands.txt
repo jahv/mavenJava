@@ -27,6 +27,9 @@ java -cp mavenJava-0.0.1-SNAPSHOT.jar jahv.selfstudy.web.WelcomeController
 				<name>env</name>
 				<value>test</value>
 			</property>
+			
+			 mvn [phase] -D[var]=[val] => mvn test -Denv=PROD
+			 
 	#Profile Activation via Operating System
 		Add activation element to profile element in pom.xml with 
 			<os>
