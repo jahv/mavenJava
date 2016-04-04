@@ -1,5 +1,7 @@
 package jahv.selfstudy.web;
 
+import org.apache.commons.lang3.StringUtils;
+
 /**
  * Welcome controller
  * 
@@ -22,6 +24,7 @@ public class WelcomeController {
 	 */
 	public static void main(String[] args) {
 		System.out.println(WelcomeController.welcome());
+		System.out.println(StringUtils.capitalize(WelcomeController.welcome()));
 	}
 
 }
