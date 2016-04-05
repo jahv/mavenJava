@@ -1,3 +1,12 @@
+#default variables in maven
+	#env: references system environments
+	#project: exposes the POM. You can use a dot-notated (.) path to reference the value of a POM element. 
+			For example, in this section we used the groupId and artifactId to set the finalName element 
+			in the build configuration. The syntax for this property reference was: 
+			${project.groupId}-${project.artifactId}.
+	#All properties accessible via getProperties() on java.lang.System are exposed as POM properties. 
+		Some examples of system properties are: ${user.name}, ${user.home}, ${java.home}, and ${os.name}.
+
 #Run jar
 java -cp mavenJava-0.0.1-SNAPSHOT.jar jahv.selfstudy.web.WelcomeController
 
@@ -43,3 +52,5 @@ java -cp mavenJava-0.0.1-SNAPSHOT.jar jahv.selfstudy.web.WelcomeController
 			<file>
 				<missing>[path]</missing>
 			</file>
+			
+	 mvn help:active-profiles => shows active profiles

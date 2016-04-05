@@ -42,6 +42,8 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 								<configuration>
 									<tasks>
 										<echo>Using env.test.properties</echo>
+										<echo>System Variable PROCESSOR_ARCHITECTURE: ${env.PROCESSOR_ARCHITECTURE}</echo>
+										<echo>Accessing POM ifo: ${project.groupId}-${project.artifactId}</echo>
 										<copy file="src/main/resources/env.test.properties"
 											tofile="${project.build.outputDirectory}/env.properties" />
 									</tasks>
@@ -58,10 +60,10 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 			<id>prod-profile</id>
 			<activation>
 				<property>
-					<!-- NAME OF ENVIRONMENT VARIABLE -->
-					<name>env</name>
+					<!-- NAME OF SYSTEM ENVIRONMENT VARIABLE -->
+					<name>env.OS</name>
 					<!-- VALUE -->
-					<value>PROD</value>
+					<value>Windows_NTX</value>
 				</property>
 			</activation>
 			<build>
