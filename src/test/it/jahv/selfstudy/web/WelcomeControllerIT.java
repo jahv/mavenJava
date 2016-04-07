@@ -3,7 +3,7 @@ package jahv.selfstudy.web;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class WelcomeControllerTest {
+public class WelcomeControllerIT {
 
 	@Test
 	public void test() {
